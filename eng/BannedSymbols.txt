@@ -1,0 +1,28 @@
+P:System.DateTime.Now; Use TimeProvider
+P:System.DateTime.UtcNow; Use TimeProvider
+P:System.DateTimeOffset.Now; Use TimeProvider
+P:System.DateTimeOffset.UtcNow; Use TimeProvider
+M:System.Net.Http.HttpClient.#ctor; Use IHttpClientFactory
+M:System.Net.Http.HttpClient.#ctor(System.Net.Http.HttpMessageHandler); Use IHttpClientFactory
+M:System.Net.Http.HttpClient.#ctor(System.Net.Http.HttpMessageHandler,System.Boolean); Use IHttpClientFactory
+M:System.Threading.Tasks.Task.Wait; Await the task instead
+M:System.Threading.Tasks.Task.Wait(System.Int32); Await the task instead
+M:System.Threading.Tasks.Task.Wait(System.TimeSpan); Await the task instead
+M:System.Threading.Tasks.Task.Wait(System.Threading.CancellationToken); Await the task instead
+M:System.Threading.Tasks.Task.Wait(System.Int32,System.Threading.CancellationToken); Await the task instead
+M:System.Threading.Tasks.Task.Wait(System.TimeSpan,System.Threading.CancellationToken); Await the task instead
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[]); Use Task.WhenAll
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32); Use Task.WhenAll
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan); Use Task.WhenAll
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Threading.CancellationToken); Use Task.WhenAll
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken); Use Task.WhenAll
+M:System.Threading.Tasks.Task.WaitAll(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task},System.Threading.CancellationToken); Use Task.WhenAll
+M:System.Threading.Tasks.Task.WaitAll(System.ReadOnlySpan{System.Threading.Tasks.Task}); Use Task.WhenAll
+P:System.Threading.Tasks.Task`1.Result; Await the task instead
+T:System.Console; Libraries never write to the console; use ILogger
+T:System.Random; Use RandomNumberGenerator, decoy values must come from a CSPRNG
+M:System.GC.Collect; Let the runtime manage collections
+M:System.GC.Collect(System.Int32); Let the runtime manage collections
+M:System.GC.Collect(System.Int32,System.GCCollectionMode); Let the runtime manage collections
+M:System.GC.Collect(System.Int32,System.GCCollectionMode,System.Boolean); Let the runtime manage collections
+M:System.GC.Collect(System.Int32,System.GCCollectionMode,System.Boolean,System.Boolean); Let the runtime manage collections

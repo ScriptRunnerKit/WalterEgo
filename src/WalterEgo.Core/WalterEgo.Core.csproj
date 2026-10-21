@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Core of WalterEgo: honeytoken model, registry, trip pipeline and alert dispatching.</Description>
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="WalterEgo.Core.Tests" />
+  </ItemGroup>
+
+</Project>

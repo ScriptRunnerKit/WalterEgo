@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Generators of plausible decoy values for WalterEgo.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../WalterEgo.Core/WalterEgo.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="WalterEgo.Generators.Tests" />
+  </ItemGroup>
+
+</Project>

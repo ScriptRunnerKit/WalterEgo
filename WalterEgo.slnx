@@ -1,0 +1,25 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/WalterEgo.Samples.MinimalApi/WalterEgo.Samples.MinimalApi.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/WalterEgo.Alerting.Webhook/WalterEgo.Alerting.Webhook.csproj" />
+    <Project Path="src/WalterEgo.AspNetCore.Identity/WalterEgo.AspNetCore.Identity.csproj" />
+    <Project Path="src/WalterEgo.AspNetCore/WalterEgo.AspNetCore.csproj" />
+    <Project Path="src/WalterEgo.Cli/WalterEgo.Cli.csproj" />
+    <Project Path="src/WalterEgo.Core/WalterEgo.Core.csproj" />
+    <Project Path="src/WalterEgo.EntityFrameworkCore/WalterEgo.EntityFrameworkCore.csproj" />
+    <Project Path="src/WalterEgo.Generators/WalterEgo.Generators.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/WalterEgo.Alerting.Webhook.Tests/WalterEgo.Alerting.Webhook.Tests.csproj" />
+    <Project Path="tests/WalterEgo.Architecture.Tests/WalterEgo.Architecture.Tests.csproj" />
+    <Project Path="tests/WalterEgo.AspNetCore.Identity.Tests/WalterEgo.AspNetCore.Identity.Tests.csproj" />
+    <Project Path="tests/WalterEgo.AspNetCore.Tests/WalterEgo.AspNetCore.Tests.csproj" />
+    <Project Path="tests/WalterEgo.Benchmarks/WalterEgo.Benchmarks.csproj" />
+    <Project Path="tests/WalterEgo.Cli.Tests/WalterEgo.Cli.Tests.csproj" />
+    <Project Path="tests/WalterEgo.Core.Tests/WalterEgo.Core.Tests.csproj" />
+    <Project Path="tests/WalterEgo.EntityFrameworkCore.Tests/WalterEgo.EntityFrameworkCore.Tests.csproj" />
+    <Project Path="tests/WalterEgo.Generators.Tests/WalterEgo.Generators.Tests.csproj" />
+  </Folder>
+</Solution>
