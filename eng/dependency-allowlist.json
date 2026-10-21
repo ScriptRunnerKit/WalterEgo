@@ -1,0 +1,48 @@
+{
+  "buildOnly": [
+    "MinVer",
+    "Microsoft.CodeAnalysis.PublicApiAnalyzers",
+    "Microsoft.CodeAnalysis.BannedApiAnalyzers",
+    "Microsoft.NET.ILLink.Tasks"
+  ],
+  "baseFrameworks": [
+    "Microsoft.NETCore.App"
+  ],
+  "projects": {
+    "WalterEgo.Core": {
+      "packages": [],
+      "projects": [],
+      "frameworks": []
+    },
+    "WalterEgo.AspNetCore": {
+      "packages": [],
+      "projects": ["WalterEgo.Core"],
+      "frameworks": []
+    },
+    "WalterEgo.AspNetCore.Identity": {
+      "packages": [],
+      "projects": ["WalterEgo.AspNetCore", "WalterEgo.Core"],
+      "frameworks": []
+    },
+    "WalterEgo.EntityFrameworkCore": {
+      "packages": [],
+      "projects": ["WalterEgo.Core"],
+      "frameworks": []
+    },
+    "WalterEgo.Alerting.Webhook": {
+      "packages": [],
+      "projects": ["WalterEgo.Core"],
+      "frameworks": []
+    },
+    "WalterEgo.Generators": {
+      "packages": [],
+      "projects": ["WalterEgo.Core"],
+      "frameworks": []
+    },
+    "WalterEgo.Cli": {
+      "packages": [],
+      "projects": ["WalterEgo.Generators", "WalterEgo.Core"],
+      "frameworks": []
+    }
+  }
+}
