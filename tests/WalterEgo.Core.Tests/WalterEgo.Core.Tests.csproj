@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/WalterEgo.Core/WalterEgo.Core.csproj" />
+  </ItemGroup>
+
+</Project>

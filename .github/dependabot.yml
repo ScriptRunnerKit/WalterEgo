@@ -1,0 +1,32 @@
+# Minor and patch updates arrive grouped by family; majors arrive one by one.
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      analyzers-and-build:
+        patterns: ["Microsoft.CodeAnalysis.*", "MinVer"]
+        update-types: [minor, patch]
+      testing:
+        patterns: ["xunit*", "Shouldly", "Microsoft.Testing.*", "BenchmarkDotNet*"]
+        update-types: [minor, patch]
+      dotnet:
+        patterns: ["Microsoft.*", "System.*"]
+        update-types: [minor, patch]
+      other:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      actions:
+        patterns: ["*"]
+        update-types: [minor, patch]

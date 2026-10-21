@@ -1,0 +1,31 @@
+name: Contract and samples
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: contract-samples-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  contract-samples:
+    name: contract-samples
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: contract-samples
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          HAS_NO_SAMPLE_IMPACT_LABEL: ${{ contains(github.event.pull_request.labels.*.name, 'no-sample-impact') }}
+        run: bash eng/check-contract-samples.sh

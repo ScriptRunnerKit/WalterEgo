@@ -1,0 +1,6 @@
+# Accepted occurrences of the patterns in internal-references.patterns.
+# Format: path | excerpt | reason. Use * as the excerpt to accept a whole file.
+eng/internal-references.patterns | * | defines the patterns
+eng/internal-references.allowlist | * | lists the accepted occurrences
+.gitignore | /docs/ | keeps the local-only documentation folder out of the repository
+tests/WalterEgo.Architecture.Tests/InternalReferenceTests.cs | * | exercises the scanner with sample occurrences

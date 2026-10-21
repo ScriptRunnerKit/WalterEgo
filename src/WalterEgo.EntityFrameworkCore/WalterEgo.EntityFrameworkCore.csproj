@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Entity Framework Core integration for WalterEgo honey rows.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../WalterEgo.Core/WalterEgo.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="WalterEgo.EntityFrameworkCore.Tests" />
+  </ItemGroup>
+
+</Project>

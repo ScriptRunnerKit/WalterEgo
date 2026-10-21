@@ -1,0 +1,7 @@
+# One PCRE-compatible regular expression per line. Shared by the repository tests and the CI commit message check.
+(?i)\bspec\s*#?\d{3}\b
+\bAC-\d+\b
+\bD-\d{2,}\b
+(?i)\b(?:milestone|marco|phase|fase)\s*M?[0-6]\b
+(?i)\bM[0-6]\s+(?:milestone|marco|phase|fase)\b
+(?<![\w.-])docs/
