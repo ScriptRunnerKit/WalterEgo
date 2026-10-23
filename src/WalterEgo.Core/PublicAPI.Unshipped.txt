@@ -1,1 +1,68 @@
 #nullable enable
+WalterEgo.DecoyClass
+WalterEgo.DecoyClass.Generic = 1 -> WalterEgo.DecoyClass
+WalterEgo.DecoyClass.Unique = 2 -> WalterEgo.DecoyClass
+WalterEgo.HoneyToken
+WalterEgo.HoneyToken.<Clone>$() -> WalterEgo.HoneyToken!
+WalterEgo.HoneyToken.Class.get -> WalterEgo.DecoyClass
+WalterEgo.HoneyToken.Description.get -> string?
+override WalterEgo.HoneyToken.Equals(object? obj) -> bool
+WalterEgo.HoneyToken.Equals(WalterEgo.HoneyToken? other) -> bool
+override WalterEgo.HoneyToken.GetHashCode() -> int
+WalterEgo.HoneyToken.HoneyToken(WalterEgo.HoneyTokenId id, WalterEgo.HoneyTokenKind kind, WalterEgo.DecoyClass decoyClass, string! placement, WalterEgo.Severity severity, string? name = null, string? description = null, System.Collections.Generic.IReadOnlyDictionary<string!, string!>? tags = null) -> void
+WalterEgo.HoneyToken.Id.get -> WalterEgo.HoneyTokenId
+WalterEgo.HoneyToken.Kind.get -> WalterEgo.HoneyTokenKind
+WalterEgo.HoneyToken.Name.get -> string!
+static WalterEgo.HoneyToken.operator !=(WalterEgo.HoneyToken? left, WalterEgo.HoneyToken? right) -> bool
+static WalterEgo.HoneyToken.operator ==(WalterEgo.HoneyToken? left, WalterEgo.HoneyToken? right) -> bool
+WalterEgo.HoneyToken.Placement.get -> string!
+WalterEgo.HoneyToken.Severity.get -> WalterEgo.Severity
+WalterEgo.HoneyToken.Tags.get -> System.Collections.Generic.IReadOnlyDictionary<string!, string!>!
+override WalterEgo.HoneyToken.ToString() -> string!
+WalterEgo.HoneyTokenId
+~override WalterEgo.HoneyTokenId.Equals(object obj) -> bool
+WalterEgo.HoneyTokenId.Equals(WalterEgo.HoneyTokenId other) -> bool
+override WalterEgo.HoneyTokenId.GetHashCode() -> int
+WalterEgo.HoneyTokenId.HoneyTokenId() -> void
+WalterEgo.HoneyTokenId.HoneyTokenId(string! value) -> void
+static WalterEgo.HoneyTokenId.operator !=(WalterEgo.HoneyTokenId left, WalterEgo.HoneyTokenId right) -> bool
+static WalterEgo.HoneyTokenId.operator ==(WalterEgo.HoneyTokenId left, WalterEgo.HoneyTokenId right) -> bool
+override WalterEgo.HoneyTokenId.ToString() -> string!
+static WalterEgo.HoneyTokenId.TryCreate(string? value, out WalterEgo.HoneyTokenId id) -> bool
+WalterEgo.HoneyTokenId.Value.get -> string!
+WalterEgo.HoneyTokenKind
+WalterEgo.HoneyTokenKind.ApiKey = 3 -> WalterEgo.HoneyTokenKind
+WalterEgo.HoneyTokenKind.Config = 5 -> WalterEgo.HoneyTokenKind
+WalterEgo.HoneyTokenKind.Endpoint = 1 -> WalterEgo.HoneyTokenKind
+WalterEgo.HoneyTokenKind.File = 7 -> WalterEgo.HoneyTokenKind
+WalterEgo.HoneyTokenKind.Row = 4 -> WalterEgo.HoneyTokenKind
+WalterEgo.HoneyTokenKind.SessionToken = 6 -> WalterEgo.HoneyTokenKind
+WalterEgo.HoneyTokenKind.User = 2 -> WalterEgo.HoneyTokenKind
+WalterEgo.ISecretHasher
+WalterEgo.ISecretHasher.ComputeDigest(WalterEgo.TriggerDomain domain, System.ReadOnlySpan<char> value) -> WalterEgo.SecretDigest
+WalterEgo.ITokenRegistry
+WalterEgo.ITokenRegistry.HasTriggers(WalterEgo.TriggerDomain domain) -> bool
+WalterEgo.ITokenRegistry.Tokens.get -> System.Collections.Generic.IReadOnlyList<WalterEgo.HoneyToken!>!
+WalterEgo.ITokenRegistry.TryGet(WalterEgo.HoneyTokenId id, out WalterEgo.HoneyToken? token) -> bool
+WalterEgo.ITokenRegistry.TryMatch(WalterEgo.TriggerDomain domain, System.ReadOnlySpan<char> value, out WalterEgo.HoneyToken? token) -> bool
+WalterEgo.SecretDigest
+override WalterEgo.SecretDigest.Equals(object? obj) -> bool
+WalterEgo.SecretDigest.Equals(WalterEgo.SecretDigest other) -> bool
+override WalterEgo.SecretDigest.GetHashCode() -> int
+const WalterEgo.SecretDigest.Length = 32 -> int
+static WalterEgo.SecretDigest.operator !=(WalterEgo.SecretDigest left, WalterEgo.SecretDigest right) -> bool
+static WalterEgo.SecretDigest.operator ==(WalterEgo.SecretDigest left, WalterEgo.SecretDigest right) -> bool
+static WalterEgo.SecretDigest.Parse(System.ReadOnlySpan<char> text) -> WalterEgo.SecretDigest
+WalterEgo.SecretDigest.SecretDigest() -> void
+override WalterEgo.SecretDigest.ToString() -> string!
+static WalterEgo.SecretDigest.TryParse(System.ReadOnlySpan<char> text, out WalterEgo.SecretDigest digest) -> bool
+WalterEgo.Severity
+WalterEgo.Severity.Critical = 4 -> WalterEgo.Severity
+WalterEgo.Severity.High = 3 -> WalterEgo.Severity
+WalterEgo.Severity.Low = 1 -> WalterEgo.Severity
+WalterEgo.Severity.Medium = 2 -> WalterEgo.Severity
+WalterEgo.TriggerDomain
+WalterEgo.TriggerDomain.ApiKey = 1 -> WalterEgo.TriggerDomain
+WalterEgo.TriggerDomain.RequestPath = 4 -> WalterEgo.TriggerDomain
+WalterEgo.TriggerDomain.SessionToken = 3 -> WalterEgo.TriggerDomain
+WalterEgo.TriggerDomain.Username = 2 -> WalterEgo.TriggerDomain

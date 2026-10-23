@@ -8,4 +8,8 @@
     <PackageReference Include="BenchmarkDotNet" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../../src/WalterEgo.Core/WalterEgo.Core.csproj" />
+  </ItemGroup>
+
 </Project>
